@@ -1,0 +1,56 @@
+---
+title: "optimalFlowData: a data package for optimalFLowData"
+author:
+- name: Hristo Inouzhe
+  affiliation: Universidad de Valladolid, Spain
+  email: hristo.inouzhe@gmail.com
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+    BiocStyle::html_document
+vignette: >
+    %\VignetteIndexEntry{optimalFlow: optimal-transport approach to Flow Cytometry analysis}
+    %\VignetteEngine{knitr::rmarkdown}
+    \usepackage[utf8]{inputenc}
+references:
+- id: optimalFlow
+  title: 'optimalFlow: optimal-transport approach to Flow Cytometry analysis'
+  author:
+  - family: del Barrio
+    given: Eustasio
+  - family: Inouzhe
+    given: Hristo
+  - family: Loubes
+    given: Jean-Michel
+  - family: Mayo-Iscar
+    given: Agustin
+  - family: Matran
+    given: Carlos
+  URL: 'https://arxiv.org/abs/1907.08006'
+  type: article-journal
+  issued:
+    year: 2019
+    month: 7
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+*optimalFlow* is a package dedicated to applying optimal-transport techniques to supervised flow cytometry gating based on the results in @optimalFlow.
+
+# Installation
+
+Installation procedure:
+
+```{r ej00, eval = FALSE}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("optimalFlowData")
+```
+
+# References
