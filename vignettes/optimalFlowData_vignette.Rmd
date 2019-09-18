@@ -96,7 +96,7 @@ database = list(
                    c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),]
   )
 ```
-A plot of the data in a 3 dimensional subspase
+A plot of the data in a 3 dimensional subspace
 ```{r ej2, echo = TRUE}
 pairs(database[[1]][,c(4, 3, 9)], col = factor(database[[1]][, 11]))
 ```
