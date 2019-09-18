@@ -1,5 +1,5 @@
 ---
-title: "optimalFlowData: a data package for optimalFLowData"
+title: "optimalFlowData: a data package for optimalFlow"
 author:
 - name: Hristo Inouzhe
   affiliation: Universidad de Valladolid, Spain
@@ -40,17 +40,65 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 
-*optimalFlow* is a package dedicated to applying optimal-transport techniques to supervised flow cytometry gating based on the results in @optimalFlow.
+*optimalFlowData* is a package containing 21 flow cytometry datasets, saved as data frames, used for testing and developping examples for the package *optimalFlow* based on the results in @optimalFlow.
+
+Data come from flow cytometry measurements obtained following the Euroflow protocols and kindly provided by Centro de Investigación del Cancer (CIC) in Salamanca, Spain.
 
 # Installation
 
 Installation procedure:
 
-```{r ej00, eval = FALSE}
+```{r ej0, eval = FALSE}
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 
 BiocManager::install("optimalFlowData")
+```
+
+# Use
+```{r ej01, eval = TRUE}
+library(optimalFlowData)
+head(Cytometry1)
+```
+We can create a database of gated cytometries containing four cell types.
+```{r ej1, eval = TRUE}
+
+database = list(
+  Cytometry2[which(Cytometry2$`Population ID (name)` %in% 
+                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
+  Cytometry3[which(Cytometry3$`Population ID (name)` %in% 
+                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
+  Cytometry4[which(Cytometry4$`Population ID (name)` %in% 
+                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
+  Cytometry5[which(Cytometry5$`Population ID (name)` %in% 
+                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
+  Cytometry7[which(Cytometry7$`Population ID (name)` %in% 
+                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
+  Cytometry8[which(Cytometry8$`Population ID (name)` %in% 
+                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
+  Cytometry9[which(Cytometry9$`Population ID (name)` %in% 
+                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
+  Cytometry12[which(Cytometry12$`Population ID (name)` %in% 
+                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
+  Cytometry13[which(Cytometry13$`Population ID (name)` %in% 
+                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
+  Cytometry14[which(Cytometry14$`Population ID (name)` %in% 
+                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
+  Cytometry15[which(Cytometry15$`Population ID (name)` %in% 
+                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
+  Cytometry16[which(Cytometry16$`Population ID (name)` %in% 
+                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
+  Cytometry17[which(Cytometry17$`Population ID (name)` %in% 
+                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
+  Cytometry19[which(Cytometry19$`Population ID (name)` %in% 
+                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
+  Cytometry21[which(Cytometry21$`Population ID (name)` %in% 
+                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),]
+  )
+```
+A plot of the data in a 3 dimensional subspase
+```{r ej2, echo = TRUE}
+pairs(database[[1]][,c(4, 3, 9)], col = factor(database[[1]][, 11]))
 ```
 
 # References
