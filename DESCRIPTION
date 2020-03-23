@@ -9,6 +9,6 @@ License: Artistic-2.0
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.6)
-Suggests: knitr, BiocStyle, rmarkdown
+Suggests: knitr, BiocStyle, rmarkdown, magick
 VignetteBuilder: knitr
 biocViews: ExperimentData, PackageTypeData, ImmunoOncologyData, FlowCytometryData

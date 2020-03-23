@@ -5,22 +5,22 @@
 %%   ~~ data name/kind ... ~~
 }
 \description{
-A flow cytometry dataset as a data frame.
+A flow cytometry dataset, as a data frame, of a healty individual taken following Euroflow protocols.
 }
 \usage{data("Cytometry4")}
 \format{
   A data frame with 50000 observations on the following 11 variables.
   \describe{
-    \item{\code{CD19/TCRgd:PE Cy7-A LOGICAL}}{a numeric vector}
-    \item{\code{CD38:APC H7-A LOGICAL}}{a numeric vector}
-    \item{\code{CD3:APC-A LOGICAL}}{a numeric vector}
-    \item{\code{CD4+CD20:PB-A LOGICAL}}{a numeric vector}
-    \item{\code{CD45:PO-A LOGICAL}}{a numeric vector}
-    \item{\code{CD56+IgK:PE-A LOGICAL}}{a numeric vector}
-    \item{\code{CD5:PerCP Cy5-5-A LOGICAL}}{a numeric vector}
-    \item{\code{CD8+IgL:FITC-A LOGICAL}}{a numeric vector}
-    \item{\code{FSC-A LINEAR}}{a numeric vector}
-    \item{\code{SSC-A Exp-SSC Low}}{a numeric vector}
+    \item{\code{CD19/TCRgd:PE Cy7-A LOGICAL}}{an integer vector.}
+    \item{\code{CD38:APC H7-A LOGICAL}}{an integer vector.}
+    \item{\code{CD3:APC-A LOGICAL}}{an integer vector.}
+    \item{\code{CD4+CD20:PB-A LOGICAL}}{an integer vector.}
+    \item{\code{CD45:PO-A LOGICAL}}{an integer vector.}
+    \item{\code{CD56+IgK:PE-A LOGICAL}}{an integer vector.}
+    \item{\code{CD5:PerCP Cy5-5-A LOGICAL}}{an integer vector.}
+    \item{\code{CD8+IgL:FITC-A LOGICAL}}{an integer vector.}
+    \item{\code{FSC-A LINEAR}}{an integer vector.}
+    \item{\code{SSC-A Exp-SSC Low}}{an integer vector.}
     \item{\code{Population ID (name)}}{a vector of cell types (strings)}
   }
 }
