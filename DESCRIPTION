@@ -12,3 +12,4 @@ Depends: R (>= 3.6)
 Suggests: knitr, BiocStyle, rmarkdown, magick
 VignetteBuilder: knitr
 biocViews: ExperimentData, PackageTypeData, ImmunoOncologyData, FlowCytometryData
+RoxygenNote: 7.1.0
