@@ -40,9 +40,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 
-*optimalFlowData* is a package containing 21 flow cytometry datasets, saved as data frames, used for testing and developping examples for the package *optimalFlow* based on the results in @optimalFlow.
+*optimalFlowData* is a package containing 40 flow cytometry datasets, saved as data frames, used for testing and developping examples for the package *optimalFlow* based on the results in @optimalFlow.
 
-Data come from flow cytometry measurements obtained following the Euroflow protocols and kindly provided by Centro de Investigación del Cancer (CIC) in Salamanca, Spain.
+Data come from flow cytometry measurements obtained following the Euroflow protocols and kindly provided by Centro de Investigación del Cancer (CIC) in Salamanca, Spain. The data contains 31 cytometries from healthy individuals and 9 cytometries from patients with different types of cancer.
 
 # Installation
 
@@ -60,45 +60,19 @@ BiocManager::install("optimalFlowData")
 library(optimalFlowData)
 head(Cytometry1)
 ```
-We can create a database of gated cytometries containing four cell types.
+We can create a database of gated cytometries containing. For simplicity and visualisation we only choose 4 cell types. For an example of a database, we select some of the cytometries, as is usual in machine learning, where a subset of the data is the learning set.
 ```{r ej1, eval = TRUE}
-
-database = list(
-  Cytometry2[which(Cytometry2$`Population ID (name)` %in% 
-                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
-  Cytometry3[which(Cytometry3$`Population ID (name)` %in% 
-                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
-  Cytometry4[which(Cytometry4$`Population ID (name)` %in% 
-                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
-  Cytometry5[which(Cytometry5$`Population ID (name)` %in% 
-                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
-  Cytometry7[which(Cytometry7$`Population ID (name)` %in% 
-                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
-  Cytometry8[which(Cytometry8$`Population ID (name)` %in% 
-                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
-  Cytometry9[which(Cytometry9$`Population ID (name)` %in% 
-                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
-  Cytometry12[which(Cytometry12$`Population ID (name)` %in% 
-                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
-  Cytometry13[which(Cytometry13$`Population ID (name)` %in% 
-                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
-  Cytometry14[which(Cytometry14$`Population ID (name)` %in% 
-                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
-  Cytometry15[which(Cytometry15$`Population ID (name)` %in% 
-                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
-  Cytometry16[which(Cytometry16$`Population ID (name)` %in% 
-                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
-  Cytometry17[which(Cytometry17$`Population ID (name)` %in% 
-                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
-  Cytometry19[which(Cytometry19$`Population ID (name)` %in% 
-                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),],
-  Cytometry21[which(Cytometry21$`Population ID (name)` %in% 
-                   c("Monocytes", "CD4+CD8-", "Mature SIg Kappa", "TCRgd-")),]
-  )
+database <- buildDatabase(
+  dataset_names = paste0('Cytometry', c(2:5, 7:9, 12:17, 19, 21)),
+    population_ids = c('Monocytes', 'CD4+CD8-', 'Mature SIg Kappa', 'TCRgd-'))
 ```
 A plot of the data in a 3 dimensional subspace
 ```{r ej2, echo = TRUE}
-pairs(database[[1]][,c(4, 3, 9)], col = factor(database[[1]][, 11]))
+pairs(database[[1]][,c(4, 3, 9)], col = droplevels(database[[1]][, 11]))
 ```
-
+The diagnosis for each cytometry is obtained as follows
+```{r ej3, echo = TRUE}
+help("cytometry.diagnosis") # for an explanation of the abbreviations
+cytometry.diagnosis
+```
 # References
