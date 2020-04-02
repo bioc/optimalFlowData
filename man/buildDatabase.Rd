@@ -9,7 +9,7 @@ buildDatabase(dataset_names, population_ids)
 \arguments{
 \item{dataset_names}{A vector of strings with the names of the cytometries, ranging in c("Cytometry1",...,"Cytometry40").}
 
-\item{poplation_ids}{A vector of strings with the names of the cell types to be selected in each cytometry.}
+\item{population_ids}{A vector of strings with the names of the cell types to be selected in each cytometry.}
 }
 \value{
 A list where each element is a cytometry containing only the cell types given by population_ids.
@@ -21,4 +21,5 @@ Constructs a subset of the cell types and cytometries in optimalFlowData in orde
 database <- buildDatabase(
   dataset_names = paste0('Cytometry', c(2:5, 7:9, 12:17, 19, 21)),
   population_ids = c('Monocytes', 'CD4+CD8-', 'Mature SIg Kappa', 'TCRgd-'))
+
 }

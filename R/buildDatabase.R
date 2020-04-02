@@ -3,7 +3,7 @@
 #' Constructs a subset of the cell types and cytometries in optimalFlowData in order to be used as a database.
 #'
 #' @param dataset_names A vector of strings with the names of the cytometries, ranging in c("Cytometry1",...,"Cytometry40").
-#' @param poplation_ids A vector of strings with the names of the cell types to be selected in each cytometry.
+#' @param population_ids A vector of strings with the names of the cell types to be selected in each cytometry.
 #'
 #' @return A list where each element is a cytometry containing only the cell types given by population_ids.
 #' @examples
