@@ -5,7 +5,7 @@
 Cytometry31
 }
 \description{
-A flow cytometry dataset, as a data frame, of a healthy individual taken following Euroflow protocols.
+A simulated flow cytometry dataset, as a data frame, of a healthy individual based on data taken following Euroflow protocols.
 }
 \usage{data("Cytometry31")}
 \format{

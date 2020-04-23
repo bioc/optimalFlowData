@@ -5,7 +5,7 @@
 Cytometry24
 }
 \description{
-A flow cytometry dataset, as a data frame, of an individual wit a Follicular Lymphoma taken following Euroflow protocols.
+A simulated flow cytometry dataset, as a data frame, of an individual wit a Follicular Lymphoma based on data taken following Euroflow protocols.
 }
 \usage{data("Cytometry24")}
 \format{

@@ -40,9 +40,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 
-*optimalFlowData* is a package containing 40 flow cytometry datasets, saved as data frames, used for testing and developping examples for the package *optimalFlow* based on the results in @optimalFlow.
+*optimalFlowData* is a package containing 40 simulated flow cytometry datasets, saved as data frames, used for testing and developping examples for the package *optimalFlow* based on the results in @optimalFlow.
 
-Data come from flow cytometry measurements obtained following the Euroflow protocols and kindly provided by Centro de Investigación del Cancer (CIC) in Salamanca, Spain. The data contains 31 cytometries from healthy individuals and 9 cytometries from patients with different types of cancer.
+The simulated cytometries are based on data that come from flow cytometry measurements obtained following the Euroflow protocols and kindly provided by Centro de Investigación del Cancer (CIC) in Salamanca, Spain. The artificial cytometries mimic 31 cytometries from healthy individuals and 9 cytometries from patients with different types of cancer.
 
 # Installation
 

@@ -5,7 +5,7 @@
 Cytometry25
 }
 \description{
-A flow cytometry dataset, as a data frame, of an individual wit a Mantle Cell Lymphoma taken following Euroflow protocols.
+A simulated flow cytometry dataset, as a data frame, of an individual wit a Mantle Cell Lymphoma based on data taken following Euroflow protocols.
 }
 \usage{data("Cytometry25")}
 \format{
