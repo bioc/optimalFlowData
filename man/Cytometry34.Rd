@@ -5,7 +5,7 @@
 Cytometry34
 }
 \description{
-A flow cytometry dataset, as a data frame, of an individual with Diffuse Large B-Cell Lymphoma taken following Euroflow protocols.
+A simulated flow cytometry dataset, as a data frame, of an individual with Diffuse Large B-Cell Lymphoma based on data taken following Euroflow protocols.
 }
 \usage{data("Cytometry34")}
 \format{

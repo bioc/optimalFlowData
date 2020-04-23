@@ -5,7 +5,7 @@
 Cytometry27
 }
 \description{
-A flow cytometry dataset, as a data frame, of an individual wit a Chronic Lymphocytic Leukemia taken following Euroflow protocols.
+A simulated flow cytometry dataset, as a data frame, of an individual wit a Chronic Lymphocytic Leukemia based on data taken following Euroflow protocols.
 }
 \usage{data("Cytometry27")}
 \format{

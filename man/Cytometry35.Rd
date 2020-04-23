@@ -5,7 +5,7 @@
 Cytometry35
 }
 \description{
-A flow cytometry dataset, as a data frame, of an individual with a Hairy Cell Leukemia taken following Euroflow protocols.
+A simulated flow cytometry dataset, as a data frame, of an individual with a Hairy Cell Leukemia based on data taken following Euroflow protocols.
 }
 \usage{data("Cytometry35")}
 \format{

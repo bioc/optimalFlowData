@@ -5,7 +5,7 @@
 %%   ~~ data name/kind ... ~~
 }
 \description{
-A flow cytometry dataset, as a data frame, of a healty individual taken following Euroflow protocols.
+A simulated flow cytometry dataset, as a data frame, of a healty individual based on data taken following Euroflow protocols.
 }
 \usage{data("Cytometry17")}
 \format{
